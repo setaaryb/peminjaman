@@ -1,0 +1,203 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Gaya umum */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Kontainer utama */
+.container {
+    display: flex;
+    min-height: 100vh;
+    flex-wrap: wrap;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #1d3557;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 15px; /* Jarak antar elemen */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .logo-container {
+    margin-bottom: 10px;
+}
+
+.sidebar .logo {
+    width: 100%;
+    height: auto;
+}
+
+.sidebar a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 12px 16px;
+    border-radius: 8px;
+    background-color: #457b9d;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #1d3557;
+    transform: translateX(10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Konten utama */
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    margin: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Efek animasi */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Tabel */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 0.95em;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 14px 16px;
+    text-align: left;
+}
+
+th {
+    background-color: #1d3557;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85em;
+}
+
+tr:nth-child(even) td {
+    background-color: #f1f5f9;
+}
+
+td:hover {
+    background-color: #e9ecef;
+}
+
+/* Formulir */
+form {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #333;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"],
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="file"]:focus {
+    border-color: #457b9d;
+    box-shadow: 0 0 5px rgba(69, 123, 157, 0.5);
+}
+
+input[type="submit"] {
+    background-color: #457b9d;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #1d3557;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .content {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    table, th, td {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar a {
+        padding: 10px;
+        font-size: 0.85em;
+    }
+
+    th, td {
+        padding: 10px;
+        font-size: 0.8em;
+    }
+}
